@@ -52,3 +52,26 @@ else if((n1+n2+n3)/3>=1){
 else{
     console.log("Reprovado");
 }
+console.log("---------------------------");
+
+//exercicio 7
+for(let i=0;i<=200;i++){
+    if(i%2==0){
+        console.log(i);
+    }
+}
+console.log("---------------------------");
+
+//exercicio 8
+var num=5;
+var fatorial = 1;
+for(let i=1;i<=num;i++){
+    fatorial=fatorial*i;
+}
+console.log("Fatorial:",fatorial);
+console.log("---------------------------");
+
+//exercicio 9
+for(let i=0;i<=1000;i += 3){
+    console.log(i);
+}

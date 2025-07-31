@@ -1,7 +1,7 @@
 //var - escope global
 //let - escopo local
 //const - escopo global e o valor não altera
-
+/*
 var nome="Fulano"; //string
 var idade = 50;
 var habilitado = true;
@@ -11,12 +11,12 @@ console.log(habilitado);
 
 console.log(typeof(habilitado));
 
-/*
+
 Estritamente igual: ===
 Diferente: !=
 Estritamente diferente: !==
 Igual: ==
-*/
+
 
 var a = 10;
 var b = 15;
@@ -29,3 +29,5 @@ if(a = b){
 else{
     console.log("São diferentes");
 }
+*/
+
