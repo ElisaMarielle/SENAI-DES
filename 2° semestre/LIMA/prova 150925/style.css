@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(to top, #9bd4fa, #def2ff);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* navegação------------------------- */
+/* #c7a4a2 */
+header{
+    background-color: #ee4646;
+    margin-bottom: 25px;
+    padding: 1rem;
+    text-align: center;
+}
+header h1{
+    font-family: 'Fraunces';
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: 4px #ffffff70 underline;
+    transition: text-decoration 600ms ease;
+}
+header h1:hover{
+    text-decoration: 4px #b40707 underline;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+    font-family: 'gamja flower';
+    font-weight: 300;
+    font-size: 22px;
+}
+/* #a25e5a */
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    transition: color 600ms ease;
+}
+nav ul li a:hover{
+    color: #b40707;
+    text-decoration-line: overline;
+}
+section{
+    margin-bottom: 20px;
+}
+
+/* sobre---------------------------------------- */
+.sobre{
+    text-align: center;
+    padding: 15px;
+    margin: 10px 40px;
+    background-color: #d3ffd8d7;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 0 8px #00000090;
+}
+.sobre h2{
+    font-family: 'Fraunces';
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #b62e46;
+    text-align: center;
+    text-decoration: 4px #b4070790 underline;
+}
+.sobre p{
+    font-family: 'lato';
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-right: 55px;
+    margin-left: 55px;
+}
+.gif {
+    width: 100%;
+    height: 600px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #00000090;
+}
+
+/* sinopse -------------------------------------*/
+.sinopse{
+    text-align: center;
+    padding: 15px;
+    margin: 10px 40px;
+    background-color: #d3ffd8d7;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 0 8px #00000090;
+}
+.sinopse h2{
+    font-family: 'Fraunces';
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #232463;
+    text-align: center;
+    text-decoration: 4px #23246390 underline;
+}
+.sinopse p{
+    font-family: 'lato';
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 55px;
+    margin-left: 55px;
+}
+
+/* trailer -------------------------------*/
+.trailer{
+    text-align: center;
+    padding: 15px;
+    margin: 10px 40px;
+    background-color: #d3ffd8d7;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #00000090;
+}
+.trailer h2{
+    font-family: 'Fraunces';
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #b62e46;
+    text-align: center;
+    text-decoration: 4px #b4070790 underline;
+}
+video{
+    border-radius: 10px;
+}
+
+/* elenco ------------------------------------------*/
+.elenco{
+    text-align: center;
+    padding: 15px;
+    margin: 10px 40px;
+    background-color: #d3ffd8d7;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #00000090;
+}
+.elenco h2{
+    font-family: 'Fraunces';
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #232463;
+    text-align: center;
+    text-decoration: 4px #23246390 underline;
+}
+.persos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.personagens{
+    background-color: #f8ffcaf2;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 30%;
+    box-shadow: 0 0 8px #00000050;
+    transition: transform 600ms ease-in-out;
+}
+.personagens:hover{
+    transform: scale(1.1);
+}
+.personagens h3{
+    font-family: 'Fraunces';
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #232463;
+    text-align: center;
+    text-decoration: 4px #23246390 underline;
+}
+.personagens p{
+    font-family: 'lato';
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 55px;
+    margin-left: 55px;
+}
+.charac{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #00000090;
+}
