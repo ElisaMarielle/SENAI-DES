@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Georgia, 'Arial', 'Times New Roman', Times, serif;
+    background: #fff9de;
+    line-height: 1.6;
+}
+header{
+    background: #801f74;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+header h1{
+    margin-bottom: 0.5rem;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: bisque;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+nav ul li a:hover{
+    transform: scale(1.05);
+    color: rgb(206, 153, 84);
+    /* cursor: pointer; */
+}
+section{
+    padding: 2rem;
+    margin: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.container h2{
+    transition: transform 0.4s ease, color 0.5s;
+    text-align: center;
+    width: fit-content;
+}
+.container h2:hover{
+    transform: scale(1.15);
+    color: rgb(206, 153, 84);
+}
+/* h2{
+    margin-bottom: 1rem;
+} */
+.sobre-mim{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.sobre-mim h2{
+    transition: transform 0.4s ease, color 0.5s;
+}
+.sobre-mim h2:hover{
+    transform: scale(1.15);
+    color: rgb(206, 153, 84);
+}
+.foto-perfil{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px dashed rgb(206, 153, 84);
+}
+.sobre-info{
+    flex: 1;
+}
+.sobre-info h2{
+    margin-bottom: 0.5rem;
+}
+.sobre-info p{
+    font-size: 1rem;
+    color: #801f74;
+}
+.cards{
+    display: flex;
+    gap: 1rem;
+}
+.card{
+    background: #f6f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card h3{
+    transition: color 0.4s;
+}
+.card h3:hover{
+    color: rgb(206, 153, 84);
+}
+.hobbies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.hobby{
+    background: #f6f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.hobby:hover{
+    transform: scale(1.05);
+}
+.f{
+    font-weight: 600;
+    transition: color 0.4s ease;
+}
+.hobby .f:hover{
+    color: rgb(206, 153, 84);
+}
+.hobby i{
+    font-size: 25px;
+    color:#801f74;
+    transition: color 0.4s linear;
+}
+.hobby i:hover{
+    color: rgb(206, 153, 84);
+}

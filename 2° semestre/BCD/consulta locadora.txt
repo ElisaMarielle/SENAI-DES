@@ -1,0 +1,38 @@
+1:
+- Listar lcc status 'pendente':
+SELECT * FROM locacoes WHERE status LIKE 'pendente';
+
+2:
+- filtrar status =/ 'cancelado':
+SELECT * FROM locacoes WHERE status <> 'cancelado';
+
+3:
+- selec. cat. 'acao' e status 'entregue':
+SELECT * FROM locacoes WHERE status = 'entregue' AND categoria = 'ação';
+
+4:
+- burcar loc. nome contém 'velozes':
+SELECT * FROM locacoes WHERE filme LIKE '%Velozes%';
+
+5:
+- listar com cat. comédia, terror ou animação:
+SELECT * FROM locacoes WHERE categoria = 'animação' OR categoria = 'comédia' OR categoria = 'terror';
+
+6:
+- selec. entre datas 01/01/2025 e 31/01/2025:
+SELECT * FROM locacoes WHERE data_locacao BETWEEN '2025-01-01' AND '2025-01-31'; 
+
+7:
+- listar ordenadas por data (mais recente>mais antiga):
+SELECT * FROM locacoes ORDER BY data_locacao DESC;
+
+8:
+- listar da posição 11 a 20:
+SELECT * FROM locacoes LIMIT 10 OFFSET 10;
+
+9:
+- exibir nome do cliente e nome do filme com apelidos:
+SELECT
+  cliente_nome AS 'cliente',
+  filme AS 'filme'
+FROM locacoes;

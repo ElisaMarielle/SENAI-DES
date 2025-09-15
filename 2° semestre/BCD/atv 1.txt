@@ -1,0 +1,29 @@
+CREATE DATABASE teste1;
+
+USE teste1;
+
+CREATE TABLE Clientes(
+   	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(50),
+	email VARCHAR(50)
+);
+
+CREATE TABLE Pedidos(
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	status VARCHAR(50),
+	data_pedido DATE,
+	cliente_id INT,
+    	FOREIGN KEY (cliente_id) REFERENCES Clientes(id)
+);
+
+INSERT INTO Clientes (nome, email)
+VALUES ("Fulano Nunes", "emailteste1@gmail.com");
+
+INSERT INTO Pedidos (status, data_pedido, cliente_id)
+VALUES ("Em preparação", "2025-04-17", 1);
+
+UPDATE Clientes SET email = "email1teste@gmail.com"
+WHERE id=1;
+
+DELETE FROM Pedidos
+WHERE id=1;

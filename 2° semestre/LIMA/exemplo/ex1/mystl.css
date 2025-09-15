@@ -1,0 +1,60 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div {
+    margin: 50px;
+    padding: 50px;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+    text-align: center;
+    background-color: rgb(218, 227, 220); 
+    border: 2px black dotted;
+}
+.container{
+    border-style: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+.div2 {
+    height: fit-content;
+}
+
+h1{
+    font-family: Cinzel;
+    letter-spacing: 5px;
+    color: rgb(29, 100, 76);
+}
+#icon{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50px;
+    transition: width height;
+    transition-duration: 2s;
+}
+#icon:hover{
+    width: 150px;
+    height: 150px;
+}
+p.one{
+    font-size: 18px;
+    margin-left: 3cm;
+    margin-right: 3cm;
+}
+p{
+    font-size: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+a{
+    text-decoration: none;
+    color: rgb(30, 85, 65);
+}
+a:visited{
+    color: rgb(12, 101, 64);
+}

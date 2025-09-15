@@ -1,0 +1,75 @@
+h1, h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #758ce8;
+    text-shadow: 1px 1px 5px #000;
+}
+body{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    background: url(biblio.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-shadow: 1px 1px 5px black;
+}
+header{
+    background-color: #32364e;
+    padding: 10px;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+a:link{
+    color: #b8c3ef;
+    text-decoration: none;
+    /*transition-property: font-size;
+    transition-duration: 1s;*/
+    transition: transform 0.5s;
+    display: inline-block;
+}
+a:hover, a:visited{
+    color: #5770d1;
+    text-decoration: underline;
+    /*font-size: 20px;*/
+    transform: scale(1.2);
+}
+.banner{
+    text-align: center;
+    background-color: #1f243c;
+    padding: 30px 0;
+    border-radius: 8px;
+}
+.banner h2{
+    font-size: 30px;
+}
+section{
+    padding:20px;
+    margin: 0 20px;
+}
+.cartao{
+    border: 2px solid #b8c3ef;
+    border-radius: 8px;
+    background-color: rgba(31, 36, 60,0.9);
+    padding: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 230px;
+    height: 520px;
+    min-height: 520px;
+    vertical-align: top;
+    transition: transform 0.3s, color 0.5s ease-in-out;
+}
+.cartao:hover{
+    transform: rotate(-5deg);
+    color: #b5c4fe;
+}

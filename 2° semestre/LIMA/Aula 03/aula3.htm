@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <title>Formulário</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lanchonete Seu Zé</h1><hr>
+    <h3>Peça seu lanche!</h3>
+    <p class="one">
+        <form action="" method="">
+            <label for="nome">Nome completo</label>
+        </form>
+        <input type="text" id="nome" placeholder="Digite seu nome..."required/>
+    </p>
+    <p class="two">
+        <label for="datanasc">Data de nascimento</label>
+        <input id="datanasc" type="date"/>
+    </p>
+    <p class="t">
+        <label for="indica">Você nos indicaria?</label>
+        <input id="indica" type="number" min="1" max="5"/>
+    </p>
+    <p>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="Informe seu email..." required/>
+    </p>
+    <p>
+        <label for="cor">Cor favorita</label>
+        <input id="cor" type="color"/>
+    </p>
+    <p>
+        <label for="volume">Em qual volume você ouve musica (0 a 100)</label>
+        <input id="volume" type="range" min="0" max="100" value="50" oninput="valorVolume.textContent=this.value"/>
+        <span id="valorVolume">50</span>
+        <style>
+            #volume{
+                accent-color: rgb(103, 68, 218);
+            }
+        </style>
+    </p>
+    <p>
+        <fieldset>
+        <legend>Gênero</legend>
+        <form action="" method="">
+            <input type="radio" id="masc" name="genero"/>
+            <label for="masc">Masculino</label>
+            <input type="radio" id="fem" name="genero"/>
+            <label for="fem">Feminino</label>
+
+            <style>
+                #fem{
+                    accent-color: rgb(255, 110, 197);
+                }
+                #masc{
+                    accent-color: red;
+                }
+            </style>
+        </form>
+        </fieldset>
+    </p>
+    <br>
+    <fieldset>
+        <legend>Monte seu lanche</legend>
+        <input type="checkbox" id="salada"/>
+        <label for="salada">Salada</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="hamburguer"/>
+        <label for="hamburguer">Hamburguer</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="molho"/>
+        <label for="molho">Molho</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="milho"/>
+        <label for="milho">Milho</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="queijo"/>
+        <label for="queijo">Queijo</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="pickles"/>
+        <label for="pickles">Pickles</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="bacon"/>
+        <label for="bacon">Bacon</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="ovo"/>
+        <label for="ovo">Ovo</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="cebola"/>
+        <label for="cebola">Cebola</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="presunto"/>
+        <label for="presunto">Presunto</label>
+        <!-------------------------------------->
+        <input type="checkbox" id="tomate"/>
+        <label for="tomate">Tomate</label>
+        <!-------------------------------------->
+        <style>
+            #milho{
+                accent-color: yellow;
+            }
+            #salada{
+                accent-color: green;
+            }
+            #hamburguer{
+                accent-color: rgb(112, 58, 8);
+            }
+            #molho{
+                accent-color: rgb(144, 224, 144);
+            }
+            #queijo{
+                accent-color: rgb(255, 204, 0);
+            }
+            #pickles{
+                accent-color: rgb(3, 196, 3);
+            }
+            #bacon{
+                accent-color: rgb(134, 24, 24);
+            }
+            #ovo{
+                accent-color: rgb(255, 255, 207);
+            }
+            #cebola{
+                accent-color: rgb(243, 213, 159);
+            }
+            #presunto{
+                accent-color: pink;
+            }
+            #tomate{
+                accent-color: rgb(255, 74, 74);
+            }
+        </style>
+    </fieldset>
+    <fieldset>
+        <legend>Bebidas</legend>
+        <input type="checkbox" id="coca"/>
+        <label for="coca">Coca-Cola</label>
+    </fieldset>
+    <br>
+    <label for="info">Informações Adicionais</label>
+    <textarea id="info"></textarea>
+    <br>
+    <label for="cidade">Informe a cidade</label>
+    <select id="cidade">
+        <option>Jaguariúna</option>
+        <option>Amparo</option>
+        <option>Pedreira</option>
+    </select>
+
+</body>
+</html>

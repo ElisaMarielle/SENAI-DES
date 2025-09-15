@@ -1,0 +1,29 @@
+CREAT TABLE departamento (
+  id INT PRIMARY KEY,
+  nome VARCHA(100)
+)
+
+CREAT TABLE funcionarios (
+  id INT PRIMARI,
+  nome,
+  cargo VARCHAR(50),
+  departamento INT
+  FOREGIN KEY (departamento) REFERENCE departamento(id)
+)
+
+----------------------------------------------------------------------
+
+corrigido:
+
+CREATE TABLE departamento (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR (100)
+);
+
+CREATE TABLE funcionarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR (100),
+  cargo VARCHAR(50),
+  departamento INT,
+  FOREIGN KEY (departamento) REFERENCES funcionarios(id)
+);

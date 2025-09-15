@@ -1,0 +1,83 @@
+1. Selects com Where:
+
+- Selecione todos os clientes da cidade de "São Paulo":
+SELECT * FROM clientes_loja WHERE cidade LIKE '%São Paulo%';
+---------------------------------------------------------------------------------------------------
+- Selecione os clientes com status ativo:
+SELECT * FROM clientes_loja WHERE status LIKE 'ativo';
+---------------------------------------------------------------------------------------------------
+- Selecione os clientes com idade acima de 40:
+SELECT * FROM clientes_loja WHERE idade > 40;
+---------------------------------------------------------------------------------------------------
+- Selecione os clientes com renda entre R$ 3.000 e R$ 5.000
+SELECT * FROM clientes_loja WHERE renda_mensal BETWEEN '3000' AND '5000';
+---------------------------------------------------------------------------------------------------
+- Selecione os clientes cadastrados após 01/01/2025:
+SELECT * FROM clientes_loja WHERE data_cadastro > '2025-01-01';
+---------------------------------------------------------------------------------------------------
+- Selecione os clientes que possuem email
+SELECT * FROM clientes_loja WHERE email LIKE '%@%';
+---------------------------------------------------------------------------------------------------
+
+2. Ordenando as Consultas:
+
+- Liste todos os clientes ordenados pelo nome (A-Z):
+SELECT * FROM clientes_loja ORDER BY nome ASC;
+---------------------------------------------------------------------------------------------------
+- Liste todos os clientes ordenados da maior para a menor renda:
+SELECT * FROM clientes_loja ORDER BY renda_mensal DESC;
+---------------------------------------------------------------------------------------------------
+- Liste os clientes da cidade de "Curitiba", ordenados pela idade:
+SELECT * FROM clientes_loja WHERE cidade = 'Curitiba' ORDER BY idade ASC;
+---------------------------------------------------------------------------------------------------
+- Liste os clientes ativos ordenados pela data de cadastro:
+SELECT * FROM clientes_loja WHERE status = 'ativo'
+ORDER BY data_cadastro ASC;
+---------------------------------------------------------------------------------------------------
+
+3. Renomeando Colunas:
+
+- Mostre nome, idade e cidade, com os apelidos:
+SELECT
+  nome AS 'Nome Completo',
+  idade AS 'Idade (anos)',
+  cidade AS Cidade
+FROM clientes_loja;
+---------------------------------------------------------------------------------------------------
+- Mostre nome, renda_mensal e status, com os apelidos:
+SELECT
+  nome AS 'Nome Completo',
+  renda_mensal AS 'Renda (R$)',
+  status AS 'Situação'
+FROM clientes_loja;
+---------------------------------------------------------------------------------------------------
+
+4. LIMIT e OFFSET:
+
+- Mostre os 5 primeiros registros da tabela:
+SELECT * FROM clientes_loja LIMIT 5;
+---------------------------------------------------------------------------------------------------
+- Mostre os 10 primeiros clientes com status ativo:
+SELECT * FROM clientes_loja WHERE status = 'ativo' LIMIT 10;
+---------------------------------------------------------------------------------------------------
+- Mostre os clientes do 11º ao 20º:
+SELECT * FROM clientes_loja LIMIT 10 OFFSET 10;
+---------------------------------------------------------------------------------------------------
+- Mostre os últimos 5 clientes cadastrados:
+SELECT * FROM clientes_loja ORDER BY data_cadastro DESC LIMIT 5;
+---------------------------------------------------------------------------------------------------
+
+5. AND OR:
+
+- Liste os clientes com status ativo e idade menor que 30:
+SELECT * FROM clientes_loja WHERE status = 'ativo' AND idade < 30;
+---------------------------------------------------------------------------------------------------
+- Selecione os clientes que moram em "São Paulo" ou "Rio de Janeiro":
+SELECT * FROM clientes_loja WHERE cidade = 'São Paulo' OR cidade = 'Rio de Janeiro';
+---------------------------------------------------------------------------------------------------
+- Liste os clientes que têm email preenchido e a renda maior que R$ 6.000:
+SELECT * FROM clientes_loja WHERE email LIKE '%@%' AND renda_mensal > '6000';
+---------------------------------------------------------------------------------------------------
+- Selecione os clientes com status "pendente" ou "inativo", e com idade maior que 50 anos:
+SELECT * FROM clientes_loja WHERE (status = 'pendente' OR status = 'ativo') AND idade > 50;
+

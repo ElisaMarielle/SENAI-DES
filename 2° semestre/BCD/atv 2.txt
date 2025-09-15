@@ -1,0 +1,38 @@
+CREATE DATABASE teste2;
+
+USE teste2;
+
+CREATE TABLE Usuarios(
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(50),
+	email VARCHAR(50)
+);
+
+CREATE TABLE Livros(
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	titulo VARCHAR(50),
+	autor VARCHAR(50),
+	ano INT
+);
+
+CREATE TABLE Emprestimos(
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	data_retirada DATE,
+	data_devolucao DATE,
+	usuario_id INT,
+	livro_id INT,
+	FOREIGN KEY (usuario_id) REFERENCES Usuarios(id),
+	FOREIGN KEY (livro_id) REFERENCES Livros(id)
+);
+
+INSERT INTO Usuarios (nome, email)
+VALUES ("Fulano Nunes", "emailteste1@gmail.com");
+
+INSERT INTO Livros (autor, titulo, ano)
+VALUES ("Fulano autor", "Gato peludo", 2024);
+
+INSERT INTO Emprestimos (data_retirada, usuario_id, livro_id)
+VALUES ("2025-08-19", 1, 1);
+
+UPDATE Emprestimos SET data_devolucao = "2025-09-19"
+WHERE id=1;
