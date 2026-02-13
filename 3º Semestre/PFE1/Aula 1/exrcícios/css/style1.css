@@ -8,6 +8,11 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #faebd7;
 }
+.content{
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+}
 h1{
     color: #d2b897;
     font-size: 40px;

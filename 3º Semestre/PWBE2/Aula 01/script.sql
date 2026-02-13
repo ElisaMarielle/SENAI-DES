@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS teste;
+CREATE DATABASE teste;
+
+USE teste;
+
+CREATE TABLE lista(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    item VARCHAR(100) NOT NULL UNIQUE,
+    valor DECIMAL(5, 2) NOT NULL
+);
+
+INSERT INTO lista VALUES (DEFAULT, "Item 1", 49.00);
+INSERT INTO lista (item, valor) VALUES ("Item 2", 35.50);

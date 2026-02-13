@@ -6,7 +6,12 @@ body{
     align-items: center;
     gap: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #7fffd4;
+    background-color: #9ff5d8;
+}
+.content{
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
 }
 h1{
     color: #40a583;

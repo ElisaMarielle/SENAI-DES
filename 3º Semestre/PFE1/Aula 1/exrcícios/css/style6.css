@@ -6,25 +6,30 @@ body{
     align-items: center;
     gap: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #edb58d;
+    background-color: #fff1be;
+}
+.content{
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
 }
 h1{
-    color: #b57f58;
+    color: #ecd15c;
 }
 input{
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #b57f58;
-    outline: 1px solid #b57f58;
+    border: 1px solid #ecd15c;
+    outline: 1px solid #ecd15c;
 }
 button{
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #b57f58;
-    outline: 1px solid #b57f58;
+    border: 1px solid #ecd15c;
+    outline: 1px solid #ecd15c;
     background: none;
 }
 button:hover{
-    background: #b57f58;
+    background: #ecd15c;
     color: #fff;
 }
