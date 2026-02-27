@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: dm sans;
+    background: #def7cf;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #94bd7d;
+    padding: 10px 20px;
+}
+h1, h2{
+    font-family: cormorant unicase;
+    font-size: 2.45rem;
+    color: #4a683a;
+}

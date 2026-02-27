@@ -7,6 +7,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const clRoutes = require('./src/routes/clientes.route');
+
+app.use(clRoutes);
+
 app.listen(process.env.PORT_APP, () => {
     console.log("Online na porta " + process.env.PORT_APP);
 })

@@ -1,15 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100vw;
     height: 100vh;
     font-family: dm sans;
 }
 
-header{
+header {
     background: #670b0b;
     color: #fff;
 
@@ -18,7 +19,7 @@ header{
     justify-content: space-between;
 }
 
-button{
+button {
     font-family: dm sans;
     padding: 8px 15px;
     border: none;
@@ -28,52 +29,61 @@ button{
     border-radius: 8px;
     transition: opacity 300ms;
 }
-button:hover{
+
+button:hover {
     opacity: 0.7;
 }
 
-main{
+main {
     padding: 20px;
 }
-table{
+
+table {
     width: 100%;
     background: #fff;
     border-collapse: callapse;
 }
-th, td{
+
+th,
+td {
     padding: 10px;
     border: 1px solid #ddd;
 }
-td:last-child{
+
+td:last-child {
     text-align: center;
     padding: 0;
 }
-#excluir{
+
+#excluir {
     width: 100%;
     border-radius: 0;
 }
-th{
+
+th {
     background: #670b0b;
     color: #fff;
 }
 
-input{
+input {
     padding: 4px 10px;
     font-family: dm sans;
-    border: 2px solid #670b0b; border-radius: 8px;
+    border: 2px solid #670b0b;
+    border-radius: 8px;
 }
 
-.modal{
+.modal {
     display: none;
     position: fixed;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.modal-content{
+
+.modal-content {
     background: #fff;
     width: 300px;
     padding: 20px;
@@ -83,8 +93,8 @@ input{
     flex-direction: column;
     gap: 10px;
 }
-.modal-buttons{
+
+.modal-buttons {
     display: flex;
     justify-content: space-between;
 }
-
