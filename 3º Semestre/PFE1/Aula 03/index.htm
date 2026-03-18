@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieLoc</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jersey+15&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MovieLoc — Locadora</h1>
+        <button id="cadastro" onclick="abrirModal()">Cadastrar filme</button>
+    </header>
+
+    <main>
+        <div class="filtro-container">
+            <h2>Filtrar filmes</h2>
+            <div class="filtro">
+                <button class="btn" onclick="filtrar('Ação')">Ação</button>
+                <button class="btn" onclick="filtrar('Aventura')">Aventura</button>
+                <button class="btn" onclick="filtrar('Animação')">Animação</button>
+                <button class="btn" onclick="filtrar('Comédia')">Comédia</button>
+                <button class="btn" onclick="filtrar('Documentário')">Documentário</button>
+                <button class="btn" onclick="filtrar('Drama')">Drama</button>
+                <button class="btn" onclick="filtrar('Fantasia')">Fantasia</button>
+                <button class="btn" onclick="filtrar('Ficção')">Ficção</button>
+                <button class="btn" onclick="filtrar('Musical')">Musical</button>
+                <button class="btn" onclick="filtrar('Policial')">Policial</button>
+                <button class="btn" onclick="filtrar('Romance')">Romance</button>
+                <button class="btn" onclick="filtrar('Suspense')">Suspense</button>
+                <button class="btn" onclick="filtrar('Terror')">Terror</button>
+            </div>
+        </div>
+
+        <div class="filmes-container">
+            <h2>Filmes</h2>
+            <div id="filmes-content" class="filmes-content">
+                <div class="filmes">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="cadastrar-container" id="filmeModal">
+            <form action="" id="cadFilme">
+                <h2>Cadastrar</h2>
+                <input type="text" id="titulo" placeholder="Título" required/>
+                <input type="number" id="ano" placeholder="Ano de lançamento" required/>
+                <input type="text" id="genero" placeholder="Gênero" required/>
+                <input type="text" id="duracao" placeholder="Duração" required/>
+                <input type="number" id="preco" placeholder="Preço" required/>
+                <input type="url" id="foto" placeholder="Link da foto" required/>
+
+                <div class="modal-buttons">
+                    <button type="submit">Salvar</button>
+                    <button type="reset" onclick="fecharModal()">Cancelar</button>
+                </div>
+            </form>
+
+            
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

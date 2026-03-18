@@ -6,6 +6,7 @@
 body{
     font-family: dm sans;
     background: #def7cf;
+    height: 100vh;
 }
 
 header{
@@ -19,4 +20,60 @@ h1, h2{
     font-family: cormorant unicase;
     font-size: 2.45rem;
     color: #4a683a;
+}
+header svg{
+    color: #4a683a;
+}
+
+
+
+.produtos-container{
+    text-align: center;
+    padding: 20px;
+}
+
+.produtos-cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 400px));
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: #94bd7d;
+    padding: 10px;
+    border-radius: 8px;
+}
+.produtos h3{
+    font-family: cormorant unicase;
+    font-size: 25px;
+    color: #4a683a;
+    text-decoration: 2px solid #4a683a underline;
+}
+.produtos .foto{
+    width: 100%;
+    height: 10rem;
+}
+.foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.produtos button{
+    font-family: dm sans;
+    background-color: #def7cf;
+    padding: 8px 10px;
+    border: none; border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.produtos button:hover{
+    background-color: #c5e7b4;
 }

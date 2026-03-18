@@ -1,0 +1,271 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-03-13T12:57:00.185Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_gitparty",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "gitparty"
+    },
+    {
+      "_id": "fld_Usuarios",
+      "_type": "request_group",
+      "parentId": "fld_gitparty",
+      "name": "Usuarios"
+    },
+    {
+      "_id": "req_Usuarios_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Usuarios",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/usuarios/listar"
+    },
+    {
+      "_id": "req_Usuarios_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Usuarios",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/usuarios/buscar/:id"
+    },
+    {
+      "_id": "req_Usuarios_POST",
+      "_type": "request",
+      "parentId": "fld_Usuarios",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/usuarios/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\",\n  \"data_cadastro\": \"2026-03-13T12:57:00.177Z\"\n}"
+      }
+    },
+    {
+      "_id": "req_Usuarios_PUT",
+      "_type": "request",
+      "parentId": "fld_Usuarios",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/usuarios/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\",\n  \"data_cadastro\": \"2026-03-13T12:57:00.177Z\"\n}"
+      }
+    },
+    {
+      "_id": "req_Usuarios_DELETE",
+      "_type": "request",
+      "parentId": "fld_Usuarios",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/usuarios/excluir/:id"
+    },
+    {
+      "_id": "fld_Evento",
+      "_type": "request_group",
+      "parentId": "fld_gitparty",
+      "name": "Evento"
+    },
+    {
+      "_id": "req_Evento_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Evento",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/evento/listar"
+    },
+    {
+      "_id": "req_Evento_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Evento",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/evento/buscar/:id"
+    },
+    {
+      "_id": "req_Evento_POST",
+      "_type": "request",
+      "parentId": "fld_Evento",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/evento/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"string\",\n  \"descricao\": \"string\",\n  \"data_evento\": \"2026-03-13T12:57:00.185Z\",\n  \"local\": \"string\",\n  \"capacidade_maxima\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Evento_PUT",
+      "_type": "request",
+      "parentId": "fld_Evento",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/evento/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"string\",\n  \"descricao\": \"string\",\n  \"data_evento\": \"2026-03-13T12:57:00.185Z\",\n  \"local\": \"string\",\n  \"capacidade_maxima\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Evento_DELETE",
+      "_type": "request",
+      "parentId": "fld_Evento",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/evento/excluir/:id"
+    },
+    {
+      "_id": "fld_Inscricoes",
+      "_type": "request_group",
+      "parentId": "fld_gitparty",
+      "name": "Inscricoes"
+    },
+    {
+      "_id": "req_Inscricoes_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Inscricoes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/inscricoes/listar"
+    },
+    {
+      "_id": "req_Inscricoes_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Inscricoes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/inscricoes/buscar/:id"
+    },
+    {
+      "_id": "req_Inscricoes_POST",
+      "_type": "request",
+      "parentId": "fld_Inscricoes",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/inscricoes/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"data_inscricao\": \"2026-03-13T12:57:00.185Z\",\n  \"eventoId\": 0,\n  \"usuariosId\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Inscricoes_PUT",
+      "_type": "request",
+      "parentId": "fld_Inscricoes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/inscricoes/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"data_inscricao\": \"2026-03-13T12:57:00.185Z\",\n  \"eventoId\": 0,\n  \"usuariosId\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Inscricoes_DELETE",
+      "_type": "request",
+      "parentId": "fld_Inscricoes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/inscricoes/excluir/:id"
+    }
+  ]
+}

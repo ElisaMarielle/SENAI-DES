@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: dm sans;
+    background: #f7dcf3;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8d197d;
+    padding: 10px 20px;
+    color: #fff;
+}
+header h1{
+    font-family: 'Jersey 15';
+    font-weight: 200;
+    font-size: 45px;
+}
+header button{
+    border: none; border-radius: 25px;
+    padding: 8px 15px;
+    font-family: dm sans;
+    font-weight: 600;
+}
+header button:hover{
+    background: #f7dcf3;
+}
+
+
+main h2{
+    font-family: 'Jersey 15';
+    font-weight: 200;
+    font-size: 2rem;
+    color: #8d197d;
+}
+
+.filtro-container, .filmes-container, .cadastrar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 10px;
+}
+.filtro-container .filtro{
+    display: flex;
+    background-color: #8d197d;
+    gap: 15px;
+    padding: 8px 15px 6px;
+    border-radius: 30px;
+    width: 70%;
+    overflow-y: auto;
+    box-shadow: 0 0 5px #00000093;
+}
+.filtro::-webkit-scrollbar{
+    height: 5px;
+}
+.filtro::-webkit-scrollbar-track{
+    background: transparent;
+}
+.filter::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+.filtro button{
+    border: none; border-radius: 20px;
+    padding: 5px 15px;
+    transition: transform 300ms;
+}
+.filtro button:hover{
+    transform: translateY(-3px);
+}
+
+
+
+.filmes-content{
+    display:flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows:auto;
+    gap: 15px;
+}
+.filmes{
+    background-color: #fff;
+    padding: 10px;
+    border: 3px dashed #8d197d; border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: transform 200ms ease, box-shadow 200ms ease-in-out;
+}
+.filmes:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 8px #00000093;
+}
+.filmes h3{
+    font-family: 'Jersey 15';
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: #8d197d;
+}
+.filmes .filmes-foto{
+    height: 8rem;
+    width: 100%;
+}
+.filmes .filmes-foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.filmes button{
+    padding: 5px 15px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #8d197d;
+    background: transparent;
+    font-family: dm sans;
+    transition: background 200ms;
+}
+.filmes button:hover{
+    background: #8d197d;
+    color: #fff;
+}
+
+.cadastrar-container{
+    background-color: #00000025;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.cadastrar-container form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin: 100px auto;
+    width: 300px;
+}
+.cadastrar-container form input{
+    padding: 5px 15px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid ;
+    font-family: dm sans;
+}
+input::placeholder{
+    font-family: dm sans;
+}
+.modal-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.cadastrar-container .modal-buttons button{
+    padding: 5px 15px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #8d197d;
+    background: transparent;
+    font-family: dm sans;
+    transition: background 200ms;
+}
+.modal-buttons button:hover{
+    background: #8d197d;
+    color: #fff;
+}
