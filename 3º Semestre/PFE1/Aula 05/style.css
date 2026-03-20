@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: dm sans;
+    background-color: #333;
+    color: #fff;
+    overflow-x: hidden;
+}
+/*
+#191414
+#535353
+#b3b3b3
+#1ed760
+*/
+
+/* ==================== */
+.app-container{
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar{
+    width: 240px;
+    padding: 25px;
+    background-color: #1d1d1d;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+}
+.sidebar svg{
+    color: #1ed760;
+    width: 50px;
+    height: 50px;
+}
+.logo{
+    color: #1ed760;
+    margin-bottom: 30px;
+}
+.search-input{
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #535353;
+    color: #fff;
+    outline: none;
+    margin-top: 10px;
+    font-family: dm sans;
+}
+.search-input::placeholder{
+    font-family: dm sans;
+    color: #b3b3b3;
+}
+
+.main-content{
+    flex: 1;
+    margin-left: 240px;
+    padding: 30px;
+    background: linear-gradient(to bottom, #535353, #191414);
+    padding-bottom: 120px;
+}
+.music-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.card-music{
+    background-color: #1e1e1e;
+    padding: 16px;
+    border-radius: 10px;
+    transition: background 300ms ease;
+    cursor: pointer;
+}
+.card-music:hover{
+    background-color: #242424;
+}
+.card-music img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.card-music h3{
+    font-size: 1rem;
+    white-space: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-music p{
+    color: #b3b3b3;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+
+.player-bar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #191414;
+    border-top: 1px solid #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.now-playing{
+    width: 30%;
+}
+.audio-controls{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+audio{
+    width: 100%;
+    filter: invert(80%) hue-rotate(180deg) brightness(1.5);
+}
+@media(max-width: 800px){
+    .sidebar{
+        display: none;
+    }
+    .main-content{
+        margin-left: 0;
+    }
+}
