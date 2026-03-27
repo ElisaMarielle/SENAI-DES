@@ -6,4 +6,4 @@ O projeto tem como objetivo criar formulários com o flutter, visando o aprendiz
 ## Print das telas:
 Para apresentar melhor o projeto, aqui estão algumas imagens das telas criadas para os desafios:
 - **Investimento:**
-![Tela inicial](./assets/inicialinvest)
+![Tela inicial](./assets/inicialinvest.png)
