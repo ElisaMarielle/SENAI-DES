@@ -10,16 +10,6 @@ inputBusca.addEventListener('keypress', (e) => {
     }
 })
 
-/*function buscarMusica(termo){
-    const antigo = document.getElementById('itunes-script');
-    if(antigo) antigo.remove();
-
-    const script = document.createElement('script');
-    script.id = 'itunes-script';
-
-    script.src = `https://itunes.apple.com/search?term=${termo}&media=music&limit=15$callback=processarResposta`;
-}*/
-
 async function buscarMusica(termo) {
     try{
         const response = await fetch(`https://itunes.apple.com/search?term=${termo}&media=music&limit=15`);

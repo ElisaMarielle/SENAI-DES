@@ -16,6 +16,17 @@ model Usuarios {
   inscricoes    Inscricoes[]
 }
 
+model Imagem {
+  id           Int      @id @default(autoincrement())
+  nomeOriginal String
+  nomeArquivo  String
+  mimeType     String
+  path         String
+  data         DateTime @default(now())
+  evento       Evento  @relation(fields: [eventoId], references: [id])
+  eventoId     Int
+}
+
 model Evento {
   id                Int          @id @default(autoincrement())
   titulo            String
@@ -26,6 +37,7 @@ model Evento {
   status            StatusEvento @default(ATIVO)
 
   inscricoes Inscricoes[]
+  imagens    Imagem[]
 }
 
 model Inscricoes {

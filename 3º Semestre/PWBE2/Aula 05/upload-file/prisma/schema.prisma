@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Publicacao {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  data      DateTime @default(now())
+  local     String
+  descricao String
+  imagens   Imagem[]
+}
+
+model Imagem {
+  id            Int        @id @default(autoincrement())
+  nomeOriginal  String
+  nomeArquivo   String
+  mimeType      String
+  path          String
+  data          DateTime   @default(now())
+  publicacoes   Publicacao @relation(fields: [publicacoesId], references: [id])
+  publicacoesId Int
+}

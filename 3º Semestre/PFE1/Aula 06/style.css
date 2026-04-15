@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+#fff, #5b6174
+#fff, #7783a9
+*/
+body{
+    font-family: dm sans;
+    background-image: url("https://loremflickr.com/320/240/horizont");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-maior{
+    background-color: #00000080;
+    border-radius: 25px;
+    padding: 30px;
+    width: 950px;
+    max-width: 450px;
+    color: #fff;
+}
+input{
+    border: none; border-radius: 25px;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 18px;
+    background-color: #7c7c7c;
+    color: #fff;
+    width: calc(100%-100px);
+}
+input::placeholder{
+    color: #c3c3c3;
+}
+.btn-busca{
+    border: none; border-radius: 50px;
+    outline: none;
+    padding: 10px;
+    background-color: #7c7c7c;
+    cursor: pointer;
+    float: right;
+}
+
+.caixa-media{
+    margin-top: 30px;
+}
+.cidade{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 300;
+}
+.tempo{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.caixa-menor{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.texto-previsao{
+    color: #fff;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+.umidade{
+    color: #fff;
+    margin-top: 20px;
+}

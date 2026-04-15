@@ -1,16 +1,20 @@
 const prisma = require("../data/prisma");
-const { limiteParticipantes } = require("../services/inscricoes.services");
+const {limiteParticipantes, verificarDuplicidade} = require("./limite.controller");
 
 const cadastrar = async (req, res) => {
-    const data = req.body;
-
-    /*const item = await prisma.inscricoes.create({
-        data
-    });*/
-
-    limiteParticipantes(data.usuarioId, data.eventoId);
-
-    res.json({}).status(201).end();
+    try {
+        const data = req.body;
+        await verificarDuplicidade(data.usuariosId, data.eventoId)
+        let status = await limiteParticipantes(data.usuariosId, data.eventoId);
+        data.status = status;
+        const inscricao = await prisma.inscricoes.create({
+            data
+        });
+        res.json(inscricao).status(201).end();
+    } catch (error) {
+        res.json({error : error.message}).status(500).end();
+    }
+    
 };
 
 const listar = async (req, res) => {

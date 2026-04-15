@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*=======HEADER=======*/
+header{
+    padding: 20px;
+    text-align: center;
+    background: #c3ffd4;
+}
+h1{
+    font-size: 2.4rem;
+}
+
+
+/*=======MODAL=======*/
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000075;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal form{
+    width: 350px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+form h2{
+    margin-bottom: 20px;
+}
+form label{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+form input{
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none; border-radius: 5px;
+    background-color: #d9d9d9;
+}
+
+
+/*=======MODAL=======*/
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2rem 0;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Receitas</title>
+</head>
+<body>
+    <header><h1>Receitas</h1></header>
+    <section><button onclick="maisReceita()" style="font-weight: bold; margin-bottom: 20px;">+ Receita</button></section>
+    <main></main>
+    <div class="modal">
+        <form action="" id="form">
+            <h3>Criar receita</h3>
+            <input type="text" id="nome" placeholder="Nome da receita">
+            <input type="text" id="tipo" placeholder="Tipo de receita (doce ou salgada)">
+            <input type="text" id="ingredientes" placeholder="Ingredientes">
+            <input type="text" id="modoFazer" placeholder="Modo de preparo">
+            <input type="number" id="custoAproximado" placeholder="Custo aproximado">
+            <input type="url" id="img" placeholder="Foto da comida">
+            <button type="submit">Publicar</button>
+            <button onclick="fechar()">Cancelar</button>
+        </form>
+    </div>
+    <footer>by ®ElisaMarielle</footer>
+    <script src="script.js"></script>
+</body>
+</html>

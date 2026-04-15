@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>GitParty</title>
+</head>
+<body>
+    <header>
+        <h1>GitParty</h1>
+    </header>
+    <main>
+        <div class="listar">
+            <h2>Lista de Eventos</h2>
+            <button onclick="Listar()">Listar todos os eventos</button>
+            <div class="listagem" id="listagem"></div>
+        </div>
+        <section>
+            <button onclick="Cadastrar()"><i class="fa-solid fa-plus"></i>Novo evento</button>
+        </section>
+        <div class="modal" id="modal">
+            <form action="" id="form">
+                <h2>Cadastrar Evento</h2>
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" placeholder="Digite o título do evento" required>
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" placeholder="Descrição do evento" required>
+                <label for="data_evento">Data do evento</label>
+                <input type="datetime" id="data_evento" placeholder="Digite a data do evento" required>
+                <label for="local">Local</label>
+                <input type="text" id="local" placeholder="Local" required>
+                <label for="capacidade_maxima">Capacidade</label>
+                <input type="text" id="capacidade_maxima" placeholder="Capacidade máxima" required>
+                <div class="form-btn">
+                    <button>Salvar</button>
+                    <button onclick="Fechar()">Fechar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3>GitParty</h3>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
