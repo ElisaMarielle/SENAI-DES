@@ -103,6 +103,7 @@ document.querySelector('#form').addEventListener('submit', function(e){
         lancamento: data.value,
         preco: preco.value ? Number(preco.value) : null
     };
+    
 
     fetch(url + '/cadastrar', {
     method: 'POST',
