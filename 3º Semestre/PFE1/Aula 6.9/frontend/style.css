@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --p-color: #0000ff;
+    --p-darker: #0000cc;
+
+    --base-font: dm sans;
+    --serif: cormorant;
+}
+/*======================================
+========================================*/
+
+
+
+/*https://www.svgrepo.com/show/17523/long-play-record-cover.svg*/
+/*=======================BODY=====================*/
+body{
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*======================================
+========================================*/
+
+
+
+/*=======================HEADER=====================*/
+header{
+    display: flex;
+    padding: 10px;
+    background: linear-gradient(to bottom, #000000bb 50%, transparent 100%);
+    padding: 20px 15rem;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+/*=============*/
+.header-icon{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.header-icon img{
+    filter: invert(100%);
+    animation: discRotate 3s linear infinite;
+}
+h1{
+    background: linear-gradient(45deg, #0000ff, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: var(--base-font);
+    font-size: 2.2rem;
+}
+/*=============*/
+.header-buttons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-buttons button{
+    border: none;
+    color: #fff;
+    background: transparent;
+    font-family: var(--base-font);
+    font-size: 16px;
+    cursor: pointer;
+}
+.header-buttons button:hover{
+    text-decoration: underline;
+}
+.header-buttons a{
+    padding: 6px 15px;
+    border: none; border-radius: 20px;
+    background-color: var(--p-color);
+    color: #fff;
+    font-family: var(--base-font);
+    font-size: 14px;
+    text-decoration: none;
+}
+.header-buttons a:hover{
+    background-color: var(--p-darker);
+}
+/*=============*/
+@keyframes discRotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+/*======================================
+========================================*/
+
+
+
+/*=======================HEADER=====================*/
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+.on{
+    animation: slideIn 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.off{
+    animation: slideOut 0.4s;
+    opacity: 0;
+}
+.search input{
+    width: 350px;
+    border: none; border-radius: 20px;
+    outline: none;
+    padding: 6px 10px;
+    font-family: var(--base-font);
+}
+.search input::placeholder{
+    font-family: var(--base-font);
+}
+/*=============*/
+@keyframes slideIn{
+    0%{transform: translateY(-90px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+@keyframes slideOut{
+    0%{transform: translateY(0); opacity: 1;}
+    100%{transform: translateY(-90px); opacity: 0;}
+}
+/*======================================
+========================================*/
+
+
+
+
+/*=======================LISTAGEM=====================*/
+main{
+    padding: 40px;
+    background: #000000bb;
+}
+main h2{
+    background: linear-gradient(45deg, #0000ff, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: var(--base-font);
+    font-size: 2.2rem;
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+.listagem{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 20px;
+}
+.listagem .card{
+    background-color: #fff;
+    border-radius: 0 20px 20px 20px;
+    transition: transform 0.5s;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+/*=============*/
+.card .album-img{
+    width: 100%;
+    height: 150px;
+}
+.card .album-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+}
+/*=============*/
+.card .album-info{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .album-info h2{
+    text-align: center;
+    color: var(--p-color);
+    font-family: var(--base-font);
+    font-size: 1.5rem;
+}
+.card .album-info p{
+    text-align: center;
+    font-family: var(--base-font);
+}
+/*======================================
+========================================*/
+
+
+
+/*=======================CADASTRAR=====================*/
+.modal{
+    width: 100%;
+    height: 100%;
+    background: #000000bb;
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 3;
+}
+.modal form{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+/*=============*/
+.modal form h2{
+    color: var(--p-color);
+    font-family: var(--base-font);
+}
+.modal form label{
+    font-family: var(--base-font);
+}
+.modal form input{
+    border: none; border-radius: 20px;
+    outline: 2px solid #999;
+    padding: 6px 10px;
+    font-family: var(--base-font);
+}
+/*=============*/
+.modal form .form-btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.modal form .form-btns button{
+    padding: 6px 15px;
+    border: none; border-radius: 20px;
+    background-color: var(--p-color);
+    color: #fff;
+    font-family: var(--base-font);
+    font-size: 14px;
+    text-decoration: none;
+}
+.modal form .form-btns button:hover{
+    background-color: var(--p-darker);
+}
+/*======================================
+========================================*/
+
+
+
+/*=======================EDITAR=====================*/
+.detalhes{
+    width: 100%;
+    height: 100%;
+    background: #000000bb;
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.oculto{
+    display: none;
+}
+.detalhes .janela{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+/*=============*/
+.janela .det-info{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.janela .det-info h2{
+    color: var(--p-color);
+    font-family: var(--base-font);
+}
+.janela .det-info p{
+    font-family: var(--base-font);
+}
+.janela .det-info input{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none; border-radius: 20px;
+    outline: 2px solid #999;
+    padding: 6px 10px;
+    font-family: var(--base-font);
+}
+/*=============*/
+.janela .det-img{
+    width: 100%;
+    height: 150px;
+}
+.janela .det-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/*=============*/
+.janela .janela-btns{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.detalhes .janela .janela-btns button{
+    padding: 6px 15px;
+    border: none; border-radius: 20px;
+    background-color: var(--p-color);
+    color: #fff;
+    font-family: var(--base-font);
+    font-size: 14px;
+    text-decoration: none;
+}
+.detalhes .janela .janela-btns button:hover{
+    background-color: var(--p-darker);
+}
+/*======================================
+========================================*/
+
+
+
+/*=======================EDITAR=====================*/
+footer{
+    margin-top: 2rem;
+    background: #000000df;
+    backdrop-filter: blur(5px);
+    padding: 80px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--base-font);
+}

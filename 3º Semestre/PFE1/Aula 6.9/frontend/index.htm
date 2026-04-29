@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liryus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-icon">
+            <h1>Liryus - Music Store</h1>
+            <img src="https://www.svgrepo.com/show/40029/vinyl-record.svg" alt="icon" width="30px" height="30px">
+        </div>
+        <div class="header-buttons">
+            <button onclick="togglePesquisa()">Pesquisar</button>
+            <button onclick="abrir()">Cadastrar álbum</button>
+            <a href="#">Cadastrar-se</a>
+            <a href="#">Entrar</a>
+        </div>
+    </header>
+
+    <div class="search off" id="searching">
+        <input type="search" id="search" placeholder="Pesquisar...">
+    </div>
+
+    <div class="modal" id="modal">
+        <form action="" id="form">
+            <h2>Cadastrar novo álbum</h2>
+            <!----------------->
+            <label for="nome">Nome do álbum</label>
+            <input type="text" id="nome">
+            <!----------------->
+            <label for="img">Imagem</label>
+            <input type="url" id="img" placeholder="URL">
+            <!----------------->
+            <label for="musics">Músicas</label>
+            <input type="text" id="musics">
+            <!----------------->
+            <label for="genre">Gênero</label>
+            <input type="text" id="genre">
+            <!----------------->
+            <label for="data">Data de lançamento</label>
+            <input type="date" id="data">
+            <!----------------->
+            <label for="preco">Preço</label>
+            <input type="number" id="preco">
+            <!----------------->
+            <div class="form-btns">
+                <button>Salvar</button>
+                <button type="button" onclick="fechar()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+
+    <main>
+        <h2>Álbuns</h2>
+        <div class="listagem" id="listagem"></div>
+    </main>
+    
+
+    <div id="detalhes" class="detalhes oculto">
+        <div class="janela">
+            <div class="det-img">
+                <img id="imgAlbum">
+            </div>
+            <div class="det-info">
+                <h2 id="tituloAlbum"></h2>
+                <!----------------->
+                <p>Nome</p>
+                <input type="text" id="nomeEdit">
+                <!----------------->
+                <p>Imagem (URL)</p>
+                <input type="text" id="imgEdit">
+                <!----------------->
+                <p>Músicas</p>
+                <input type="text" id="musicsEdit">
+                <!----------------->
+                <p>Gênero</p>
+                <input type="text" id="genreEdit">
+                <!----------------->
+                <p>Data de lançamento</p>
+                <input type="text" id="dataEdit">
+                <!----------------->
+                <p>Preço</p>
+                <input type="number" id="precoEdit">
+            </div>
+            <!----------------->
+            <div class="janela-btns">
+                <button onclick="salvarEdicao()">Salvar</button>
+                <button onclick="excluirAlbumAtual()">Excluir</button>
+                <button onclick="detalhes.classList.add('oculto')">Fechar</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <h3>Liryus - Music Store</h3>
+        <p>Produtos</p>
+        <p>Sobre nós</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
