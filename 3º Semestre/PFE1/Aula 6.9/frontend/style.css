@@ -110,10 +110,12 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: visible;
 }
 .off{
     animation: slideOut 0.4s;
     opacity: 0;
+    visibility: hidden;
 }
 .search input{
     width: 350px;
@@ -127,12 +129,12 @@ h1{
 }
 /*=============*/
 @keyframes slideIn{
-    0%{transform: translateY(-90px); opacity: 0;}
-    100%{transform: translateY(0); opacity: 1;}
+    0%{transform: translateY(-60px); opacity: 0; visibility: hidden;}
+    100%{transform: translateY(0); opacity: 1; visibility: visible;}
 }
 @keyframes slideOut{
-    0%{transform: translateY(0); opacity: 1;}
-    100%{transform: translateY(-90px); opacity: 0;}
+    0%{transform: translateY(0); opacity: 1; visibility: visible;}
+    100%{transform: translateY(-60px); opacity: 0; visibility: hidden;}
 }
 /*======================================
 ========================================*/
