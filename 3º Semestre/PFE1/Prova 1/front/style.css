@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: dm sans;
+  background: linear-gradient(to bottom, #141414, #6f6f6f);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/*-------------------------------------------------*/
+
+header {
+  background: #000000;
+  padding: 20px 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+header h1 {
+  color: white;
+}
+nav {
+  display: flex;
+  gap: 30px;
+}
+nav a{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: dm sans;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav a:first-child{
+  background-color: #6f6f6f;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+nav a img{
+  filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(1450%) hue-rotate(35deg) brightness(131%) contrast(94%);
+}
+
+/*-------------------------------------------------*/
+
+.tarefas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  color: #fff;
+}
+.tarefas h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.tarefas .lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+.card{
+  background: #141414;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+}
+.card .left-side{
+  height: 100%;
+  width: 50%;
+}
+.left-side img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card .right-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.right-side .tarefa-info h2{
+  margin-bottom: 5px;
+}
+
+
+
+/*-------------------------------------------------*/
+
+.containert{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #00000036;
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.cadastrar{
+  width: 350px;
+  text-align: center;
+  background: #00000080;
+  padding: 20px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: dm sans;
+}
+.cadastrar img{
+  height: 25px;
+  width: 100%;
+  filter: invert(100%);
+  padding-left: 80%;
+}
+.cadastrar h2{
+  margin-bottom: 1rem;
+}
+.cadastrar form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+}
+form input{
+  width: 80%;
+  padding: 4px 12px;
+  font-family: dm sans;
+  border-radius: 4px;
+  outline: none; border: none;
+}
+.cadastrar form textarea{
+  resize: none;
+  height: 60px;
+  width: 80%;
+  padding: 4px 12px;
+  font-family: dm sans;
+  border-radius: 4px;
+  outline: none; border: none;
+}
+.cadastrar button{
+  background-color: #6f6f6f;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none; outline: none;
+  font-family: dm sans;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.cadastrar button:hover{
+  background-color: #616161;
+}

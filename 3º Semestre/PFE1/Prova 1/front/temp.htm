@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Check</title>
+    <link rel="stylesheet" href="temp.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Daily Check</h1>
+        <nav>
+            <a href="index.htm">Home</a>
+            <a onclick="abrir()">Tarefas</a>
+            <a href="temp.htm">Temperatura</a>
+        </nav>
+    </header>
+    
+    <div class="centraliza">
+        <div class="container">
+            <div class="buscar">
+                <input class="input-cidade" placeholder="Digite o nome da cidade">
+                <button class="btn-busca" onclick="cliqueBotao()">
+                    <img class="img-busca" src="https://www.svgrepo.com/show/521826/search.svg" alt="busca" width="20px" height="15px">
+                </button>
+            </div>
+            <div class="details">
+                <h2 class="cidade">Tempo em São Paulo</h2>
+                <p class="tempo">21°C</p>
+                <div class="result">
+                    <img class="img-previsao" src="https://openweathermap.org/img/wn/04n.png" alt="previsão">
+                    <p class="texto-previsao">Nublado</p>
+                </div>
+                <p class="umidade">Umidade: 70%</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="temp.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

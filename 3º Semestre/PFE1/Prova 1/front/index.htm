@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Check</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body style="overflow-y: hidden;">
+    <header>
+        <h1>Daily Check</h1>
+        <nav>
+            <a href="index.htm">Home</a>
+            <a onclick="abrir()">Tarefas</a>
+            <a href="temp.htm">Temperatura</a>
+        </nav>
+    </header>
+
+    <div class="containert" id="modal">
+        <div class="cadastrar">
+            <img src="https://www.svgrepo.com/show/510922/close-sm.svg" alt="close" onclick="fechar()">
+            <h2>Nova Tarefa</h2>
+            <form action="" id="form">
+                <input type="text" id="nome" placeholder="Nome da tarefa">
+                <textarea id="descricao" placeholder="Descrição da tarefa"></textarea>
+                <input type="date" id="data_inicio" placeholder="Data de início">
+                <input type="date" id="data_fim" placeholder="Data do final">
+                <input type="url" id="img" placeholder="URL da imagem">
+                <button>Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="tarefas">
+        <h2>Suas tarefas</h2>
+        <div id="lista" class="lista"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

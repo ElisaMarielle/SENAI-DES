@@ -1,0 +1,72 @@
+.container{
+    background-color: #00000080;
+    border-radius: 5px;
+    padding: 30px;
+    width: 950px;
+    max-width: 450px;
+    color: #fff;
+}
+.centraliza{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.buscar{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.input-cidade{
+    border: none; border-radius: 25px;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 16px;
+    background-color: #7c7c7c;
+    color: #fff;
+    width: calc(100%-100px);
+    margin-bottom: 0;
+}
+input::placeholder{
+    font-family: dm sans;
+    color: #c3c3c3;
+}
+.btn-busca{
+    border: none; border-radius: 50px;
+    outline: none;
+    padding: 10px;
+    background-color: #7c7c7c;
+    cursor: pointer;
+    float: right;
+}
+
+.details{
+    margin-top: 30px;
+    text-align: center;
+}
+.cidade{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 300;
+}
+.tempo{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+.texto-previsao{
+    color: #fff;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+.umidade{
+    color: #fff;
+    margin-top: 20px;
+}
