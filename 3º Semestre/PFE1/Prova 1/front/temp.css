@@ -1,3 +1,6 @@
+body{
+    overflow-y: hidden;
+}
 .container{
     background-color: #00000080;
     border-radius: 5px;
@@ -10,6 +13,8 @@
     margin-top: 5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 80%;
 }
 .buscar{
     display: flex;

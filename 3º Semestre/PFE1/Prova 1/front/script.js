@@ -28,6 +28,8 @@ function listarCards(){
     tarefas.forEach(tarefa =>{
         const card = document.createElement('div');
         card.classList.add('card');
+        tarefa.ndata_inicio = tarefa.data_inicio.replaceAll("-","/")
+        tarefa.ndata_fim = tarefa.data_fim.replaceAll("-","/")
 
         card.innerHTML = `
           <div class="left-side">
@@ -36,12 +38,12 @@ function listarCards(){
           <div class="right-side">
             <div class="tarefa-info">
               <h2>${tarefa.nome}</h3>
-              <p>${tarefa.descricao}</p>
-              <p>Início: ${tarefa.data_inicio}</p>
-              <p>Fim: ${tarefa.data_fim}</p>
+              <p style="color: #a9a9a9;">${tarefa.descricao}</p>
+              <p><b>Início:</b> <span>${tarefa.ndata_inicio}</span></p>
+              <p><b>Fim:</b> <span>${tarefa.ndata_fim}</span></p>
             </div>
             <div class="tarefa-btn">
-              <button onclick="excluirTarefa()">Excluir</button>
+              <button onclick="excluirTarefa(${tarefa.id})">Excluir</button>
             </div>
           </div>
         `;
@@ -86,26 +88,26 @@ document.querySelector('#form').addEventListener('submit', function(e){
         }
     })
     .then(() => {
-        alert("tarefa adicionado com sucesso.");
-        cadastro.classList.add('oculto');
-        carregarProdutos();
+        alert("Tarefa adicionada com sucesso.");
+        carregarTarefas();
     })
-    .catch(() => alert("Erro ao salvar tarefa"));
+    .catch(() => {
+        alert("Erro ao cadastrar tarefa.");
+    })
 })
 
 
 //----------------------------------------------------------//
 
 
-function excluirTarefa(){
+function excluirTarefa(id){
     if(!confirm("Deseja excluir essa tarefa?"))return;
-    fetch(url + '/excluir/' + tarefaAtual.id,{
+    fetch(`${url}/excluir/${id}`,{
         method: 'DELETE',
     })
     .then(()=>{
-        alert("tarefa excluída com sucesso.");
-        detalhes.classList.add('oculto');
-        carregarProdutos();
+        alert("Tarefa excluída com sucesso.");
+        carregarTarefas();
     })
     .catch(()=>alert("Erro ao excluir tarefa."));
 }
