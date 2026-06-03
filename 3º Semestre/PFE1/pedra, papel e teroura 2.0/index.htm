@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <title>Pedra papel e tesoura</title>
+</head>
+<body>
+   <header class="introducao">
+        <div class="header-left">
+            <img src="./images/icon.png" alt="icon">
+            <h1>Pedra, papel, tesoura e cobra</h1>
+            <p>Versão Sudoku</p>
+        </div>
+        <div class="header-right">
+            <button class="btn-regra" onclick="mostrarRegras()"><img src="./images/rules.png" alt="regras icon">Regras</button>
+        </div>
+   </header>
+   <main class="jogo">
+        <div class="sudoku">
+            <table>
+                <tr>
+                    <td id="A1" data-fixed="true"><img src="./images/cobra.png" alt="cobra"></td>
+                    <td id="A2" data-answer="papel"> </td>
+                    <td id="A3" data-answer="pedra"> </td>
+                    <td id="A4" data-fixed="true"><img src="./images/tesoura.png" alt="tesoura"></td>
+                </tr>
+                <tr>
+                    <td id="B1" data-answer="tesoura"> </td>
+                    <td id="B2" data-fixed="true"><img src="./images/pedra.png" alt="pedra"></td>
+                    <td id="B3" data-answer="papel"> </td>
+                    <td id="B4" data-answer="cobra"> </td>
+                </tr>
+                <tr>
+                    <td id="C1" data-answer="pedra"> </td>
+                    <td id="C2" data-answer="tesoura"> </td>
+                    <td id="C3" data-fixed="true"><img src="./images/cobra.png" alt="pedra"></td>
+                    <td id="C4" data-answer="papel"></td>
+                </tr>
+                <tr>
+                    <td id="D1" data-fixed="true"><img src="./images/papel.png" alt="papel"></td>
+                    <td id="D2" data-answer="cobra"> </td>
+                    <td id="D3" data-answer="tesoura"> </td>
+                    <td id="D4" data-answer="pedra"> </td>
+                </tr>
+            </table>
+            <!---------------------------------->
+            <div class="grid-funcionalidade">
+                <div class="opcoes">
+                    <div class="container-papel">
+                        <button data-value="papel" class="papel opcao"><img src="./images/papel.png" alt="papel"></button>
+                    </div>
+                    <div class="container-pedra">
+                        <button data-value="pedra" class="pedra opcao"><img src="./images/pedra.png" alt="pedra"></button>
+                    </div>
+                    <div class="container-tesoura">
+                        <button data-value="tesoura" class="tesoura opcao"><img src="./images/tesoura.png" alt="tesoura"></button>
+                    </div>
+                    <div class="container-cobra">
+                        <button data-value="cobra" class="cobra opcao"><img src="./images/cobra.png" alt="cobra"></button>
+                    </div>
+                </div>
+                <button id="verificar" class="verificar" style="display: none;">Verificar</button>
+            </div>
+            <!---------------------------------->
+            <div class="mensagem" id="mensagem"></div>
+        </div>
+   </main>
+
+   <div class="regras" id="regra">
+        <div class="regras-titulo">
+            <h1>Regras</h1>
+            <button onclick="fecharRegras()"><img src="./images/close.png" alt="fechar icon" width="30px" height="30px"></button>
+        </div>
+        <p>As linhas horizontais e verticais da grade quadriculada devem ser preenchidas com as imagens da cobra, papel, pedra e tesoura, assim como cada um dos 4 blocos quadrados. O desafio é completar todo o sistema sem repetir algarismos nas linhas, colunas ou quadrados.</p>
+   </div>
+
+   <!----------------RESETAR---------------->
+   <button class="reset" id="reset">Recomeçar</button>
+
+   <script src="script.js"></script>
+</body>
+</html>
