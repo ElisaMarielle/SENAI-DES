@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitParty — Cadastrar evento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="left">
+            <h1>GitParty</h1>
+            <a href="index.htm">Descubra</a>
+            <a href="cad.htm" style="color: #000; text-decoration: overline; font-size: 17px;">Organize</a>
+        </div>
+        <div class="right">
+            <a href="#">Entrar</a>
+            <a href="user.htm">Cadastre-se</a>
+            <a href="cad.htm">Crie um evento</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="top">
+            <h2 style="margin-bottom: 8px;">Crie <span>seu evento</span></h2>
+            <p>Coloque os detalhes abaixo para começar a organizar seu projeto.</p>
+        </div>
+        <div class="form">
+            <form action="" id="form" class="forme">
+                <div class="nome">
+                    <label for="titulo">Nome do evento</label>
+                    <input type="text" id="titulo" placeholder="Ex.: Palesta no E.E Rangel Pestana">
+                </div>
+                <div class="local">
+                    <label for="local">Local</label>
+                    <input type="text" id="local" placeholder="Ex.: Escola Rangel Pestana Rua...">
+                </div>
+                <div class="cap">
+                    <label for="capacidade_maxima">Capacidade do evento</label>
+                    <input type="number" id="capacidade_maxima" value="0">
+                </div>
+                <div class="data">
+                    <label for="data_evento">Data e hora do evento</label>
+                    <input type="datetime" id="data_evento">
+                </div>
+                <div class="desc">
+                    <label for="descricao">Descrição do evento</label>
+                    <textarea id="descricao" placeholder="Propósito, objetivo, etc..."></textarea>
+                </div>
+                <button>Publicar</button>
+            </form>
+        </div>
+    </main>
+    <script src="../scripts/cadastro.js"></script>
+</body>
+</html>

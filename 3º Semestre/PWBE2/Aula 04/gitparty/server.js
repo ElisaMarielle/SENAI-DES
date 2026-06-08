@@ -10,11 +10,9 @@ const inscricoesRoutes = require('./src/routes/inscricoes.routes');
 
 app.use('/inscricoes', inscricoesRoutes);
 
-
 const eventoRoutes = require('./src/routes/evento.routes');
 
 app.use('/evento', eventoRoutes);
-
 
 const usuariosRoutes = require('./src/routes/usuarios.routes');
 

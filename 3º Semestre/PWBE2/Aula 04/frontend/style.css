@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: #121212;
+    --yellow: #fde047;
+    --green3: #6BFF8F;
+    --green: #22c55e;
+    --green2: #068a41;
+    --gray: #646464;
+
+    --serif: newsreader;
+    --sans-serif: hanken grotesk;
+}
+body{
+    background-color: #f6f6f6;
+}
+
+/*===============================================================*/
+/*==============HEADER==============*/
+header{
+    background: #edebf0;
+    padding: 20px 60px;
+    border-bottom: 2px solid #c2c2c2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+/*======LEFT======*/
+.left{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.left h1{
+    font-family: var(--serif);
+    margin-top: 6px;
+}
+.left a{
+    font-family: var(--sans-serif);
+    font-weight: 600;
+    color: var(--gray);
+    text-decoration: none;
+}
+/*======RIGHT======*/
+.right{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.right a{
+    font-family: var(--sans-serif);
+    font-weight: 600;
+    color: var(--gray);
+    text-decoration: none;
+}
+.right a:nth-child(-n + 2):hover{
+    text-decoration: overline;
+}
+.right a:last-child{
+    background: var(--yellow);
+    padding: 6px 12px;
+    color: #373737;
+}
+.right a:last-child:hover{
+    background: #f0d44b;
+}
+/*===============================================================*/
+
+
+/*===============================================================*/
+/*==============MAIN==============*/
+main{
+    margin: 8rem 4rem 3rem;
+}
+/*==============.TOP==============*/
+.top{
+    margin-bottom: 4rem;
+}
+.top h2{
+    font-family: var(--serif);
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.top h2 span{
+    color: var(--green2);
+    font-style: italic;
+}
+.top p{
+    font-family: var(--sans-serif);
+    color: var(--gray);
+}
+/*======.BUTTONS======*/
+.top .buttons{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/*======SEARCH======*/
+.search-bar{
+    background: #dee5ec;
+    padding: 6px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-width: 350px;
+    border-radius: 3px;
+}
+.search-bar svg{
+    color: var(--gray);
+}
+.search-bar input{
+    width: 100%;
+    border: none; outline: none;
+    background: none;
+    padding: 6px 0;
+}
+.search-bar input::placeholder{
+    font-family: var(--sans-serif);
+}
+.buttons button{
+    background: #dee5ec;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border: none; outline: none;
+    padding: 6px 12px;
+    font-weight: 600;
+    font-family: var(--sans-serif);
+}
+/*===============================================================*/
+
+
+/*===============================================================*/
+/*==============.EVENTOS==============*/
+.eventos h2{
+    font-family: var(--serif);
+    font-size: 2rem;
+}
+.eventos p{
+    color: var(--gray);
+    font-family: var(--sans-serif);
+}
+/*==============LISTAGEM==============*/
+.listagem{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+/*===============================================================*/
+
+
+/*===============================================================*/
+/*==============CADASTRAR EVENTO==============*/
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form, .forme{
+    background: #ffffff;
+    font-family: var(--sans-serif);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #c2c2c2;
+    border-radius: 4px;
+    width: 600px;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    padding: 7px 12px;
+    border: none; outline: 2px solid #c2c2c2;
+    border-radius: 3px;
+    margin-top: 4px;
+    font-family: var(--sans-serif);
+}
+form textarea{
+    padding: 7px 12px;
+    border: none; outline: 2px solid #c2c2c2;
+    border-radius: 3px;
+    margin-top: 4px;
+    font-family: var(--sans-serif);
+    height: 120px;
+    resize: none;
+}
+form textarea::placeholder, form input::placeholder{
+    font-family: var(--sans-serif);
+}
+form button{
+    background: var(--green3);
+    padding: 6px 12px;
+    color: #373737;
+    outline: none;
+    border: none;
+    font-family: var(--sans-serif);
+    font-weight: 600;
+}
+form button:hover{
+    background: var(--green);
+}

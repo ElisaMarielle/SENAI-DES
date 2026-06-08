@@ -3,8 +3,6 @@ const prisma = require("../data/prisma");
 const cadastrar = async (req, res) => {
     const data = req.body;
 
-    data.data_evento = new Date(data.data_evento);
-
     const item = await prisma.evento.create({
         data
     });
