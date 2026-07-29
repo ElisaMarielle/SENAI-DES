@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inicio-foto{
+    width: 50%;
+    height: 15rem;
+}
+.inicio-foto img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

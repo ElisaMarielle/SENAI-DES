@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            font-family: dm sans;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 3rem;
+            align-items: center;
+        }
+        .header-logo{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .hl-name{
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+        }
+        .name-up{
+            font-size: 18px;
+        }
+        .name-down{
+            font-size: 28px;
+        }
+        .hl-img{
+            width: 60px;
+            height: 60px;
+        }
+        .hl-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <div class="hl-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/960px-A_small_cup_of_coffee.JPG" alt="">
+            </div>
+            <div class="hl-name">
+                <div class="name-up">CAFETERIA</div>
+                <div class="name-down">AROMA</div>
+            </div>
+        </div>
+        <div class="header-navigator">
+            <a href="#inicio">INÍCIO</a>
+            <a href="#sobre">SOBRE</a>
+            <a href="#cardapio">CARDÁPIO</a>
+            <a href="#produtos">PRODUTOS</a>
+            <a href="#galeria">GALERIA</a>
+            <a href="#contato">CONTATO</a>
+        </div>
+        <div class="header-icons">
+            <img src="cart.svg" alt="" width="30px" height="30px">
+            <img src="hamb_menu.svg" alt="" width="30px" height="30px">
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="inicio-sobre">
+                <h1>O melhor café da cidade!</h1>
+                <p>Cafés especiais, feitos com amor e os melhores ingredientes para transformar o seu dia.</p>
+                <a href="#cardapio"><button>CONHEÇA NOSSO CARDÁPIO</button></a>
+                <div class="dots">
+                    <img src="dot-filled.svg" alt="" width="30px" height="30px">
+                    <img src="dot.svg" alt="" width="30px" height="30px">
+                    <img src="dot.svg" alt="" width="30px" height="30px">
+                </div>
+            </div>
+            <div class="inicio-foto">
+                <img src="https://servircomrequinte.francobachot.com.br/wp-content/uploads/2025/01/ARQ-cafeterias-FRANCO-BACHOT-1.jpg" alt="">
+            </div>
+        </section>
+        <!----------------------------->
+        <section id="sobre">
+            <div class="sobre-foto">
+                <img src="" alt="">
+            </div>
+            <div class="sobre-info">
+                <p>SOBRE NÓS</p>
+                <h2>Paixão por café e boas experiências</h2>
+                <p>A Cafeteria Aroma nasceu do amor pelo café e da vontade de oferecer momentos únicos para nossos clientes. Selecionamos os melhores grãos e preparamos cada bebida com carinho e dedicação.</p>
+                <a href="#galeria"><button>SAIBA MAIS</button></a>
+            </div>
+        </section>
+        <!----------------------------->
+        <section id="cardapio">
+            <div class="cardapio-up">
+                <p>CARDÁPIO</p>
+                <h2>Nossas Delícias</h2>
+                <span></span>
+            </div>
+            <div class="cardapio-grid">
+                <div class="cardapio-cat">
+                    <img src="" alt="">
+                    <h3>Cafés</h3>
+                    <p>Grãos especiais e bebidas quentes</p>
+                </div>
+                <!----------------------------->
+                <div class="cardapio-cat">
+                    <img src="" alt="">
+                    <h3>Bebidas Geladas</h3>
+                    <p>Refrescantes e saborosas</p>
+                </div>
+                <!----------------------------->
+                <div class="cardapio-cat">
+                    <img src="" alt="">
+                    <h3>Doces e Sobremesas</h3>
+                    <p>Para adoçar seu dia</p>
+                </div>
+                <!----------------------------->
+                <div class="cardapio-cat">
+                    <img src="" alt="">
+                    <h3>Salgados</h3>
+                    <p>Opções deliciosas</p>
+                </div>
+                <!----------------------------->
+                <div class="cardapio-cat">
+                    <img src="" alt="">
+                    <h3>Combos</h3>
+                    <p>Promoções especiais</p>
+                </div>
+            </div>
+            <button>VER CARDÁPIO COMPLETO</button>
+        </section>
+        <!----------------------------->
+        <section id="produtos"></section>
+        <!----------------------------->
+        <section id="galeria"></section>
+        <!----------------------------->
+        <section id="contato"></section>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="socials">
+                <div class="footer-logo">
+                    <img src="" alt="">
+                    <h4>CAFETERIA AROMA</h4>
+                </div>
+                <div class="footer-frase">
+                    <p>Mais que café, momentos especiais.</p>
+                </div>
+                <div class="footer-socials">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="navegacao">
+                <h4>NAVEGAÇÃO</h4>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="categorias">
+                <h4>CATEGORIAS</h4>
+                <a href="#inicio">Cafés</a>
+                <a href="#sobre">Bebidas Geladas</a>
+                <a href="#cardapio">Doces e Sobremesas</a>
+                <a href="#produtos">Salgados</a>
+                <a href="#galeria">Combos</a>
+            </div>
+            <div class="newsletter">
+                <h4>NEWSLETTER</h4>
+                <p>Receba novidades e promoções!</p>
+                <div class="newslet-input">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button>ASSINAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-rights">
+            © 2026 Cafeteria Aroma. Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+</html>
