@@ -15,8 +15,13 @@
         header{
             display: flex;
             justify-content: space-between;
-            padding: 10px 3rem;
+            padding: 20px 3rem;
             align-items: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: #fff;
         }
         .header-logo{
             display: flex;
@@ -43,6 +48,34 @@
             height: 100%;
             object-fit: cover;
         }
+        .header-navigator{
+            display: flex;
+            gap: 40px;
+        }
+        .header-navigator a{
+            color: #4A2F21;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .header-icons{
+            display: flex;
+            gap: 10px;
+        }
+        .cart, .menu-burg, .header-navigator a, button, .footer-socials i{
+            cursor: pointer;
+        }
+        .cart span{
+            background-color: #4A2F21;
+            color: #fff;
+            font-weight: 700;
+            font-size: 10px;
+            position: relative;
+            padding: 3.125px 7px;
+            border-radius: 70px;
+            top: -70%;
+            right: -75%;
+        }
     </style>
 </head>
 <body>
@@ -65,85 +98,194 @@
             <a href="#contato">CONTATO</a>
         </div>
         <div class="header-icons">
-            <img src="cart.svg" alt="" width="30px" height="30px">
-            <img src="hamb_menu.svg" alt="" width="30px" height="30px">
+            <div class="cart">
+                <span>2</span>
+                <img src="cart.svg" alt="" width="30px" height="30px">
+            </div>
+            <img class="menu-burg" src="hamb_menu.svg" alt="" width="30px" height="30px">
         </div>
     </header>
 
     <main>
         <section id="inicio">
-            <div class="inicio-sobre">
-                <h1>O melhor café da cidade!</h1>
-                <p>Cafés especiais, feitos com amor e os melhores ingredientes para transformar o seu dia.</p>
-                <a href="#cardapio"><button>CONHEÇA NOSSO CARDÁPIO</button></a>
-                <div class="dots">
-                    <img src="dot-filled.svg" alt="" width="30px" height="30px">
-                    <img src="dot.svg" alt="" width="30px" height="30px">
-                    <img src="dot.svg" alt="" width="30px" height="30px">
+            <div class="inicio-grid">
+                <div class="inicio-sobre">
+                    <h1>O melhor café da cidade!</h1>
+                    <p>Cafés especiais, feitos com amor e os melhores ingredientes para transformar o seu dia.</p>
+                    <a href="#cardapio"><button>CONHEÇA NOSSO CARDÁPIO</button></a>
+                    <div class="dots">
+                        <img src="dot-filled.svg" alt="" width="40px" height="40px">
+                        <img src="dot.svg" alt="" width="40px" height="40px">
+                        <img src="dot.svg" alt="" width="40px" height="40px">
+                    </div>
                 </div>
-            </div>
-            <div class="inicio-foto">
-                <img src="https://servircomrequinte.francobachot.com.br/wp-content/uploads/2025/01/ARQ-cafeterias-FRANCO-BACHOT-1.jpg" alt="">
+                <div class="inicio-foto">
+                    <img src="https://servircomrequinte.francobachot.com.br/wp-content/uploads/2025/01/ARQ-cafeterias-FRANCO-BACHOT-1.jpg" alt="">
+                </div>
             </div>
         </section>
         <!----------------------------->
         <section id="sobre">
-            <div class="sobre-foto">
-                <img src="" alt="">
+            <div class="sobre-grid grid-row">
+                <div class="sobre-foto">
+                    <img src="https://servircomrequinte.francobachot.com.br/wp-content/uploads/2023/02/post_thumbnail-3b3cea536f62f7c98b69afe171af3619.jpeg" alt="">
+                </div>
+                <div class="sobre-info">
+                    <p class="section-name">SOBRE NÓS</p>
+                    <h2 class="section-head">Paixão por café e boas experiências</h2>
+                    <p>A Cafeteria Aroma nasceu do amor pelo café e da vontade de oferecer momentos únicos para nossos clientes. Selecionamos os melhores grãos e preparamos cada bebida com carinho e dedicação.</p>
+                    <a href="#galeria"><button>SAIBA MAIS</button></a>
+                </div>
             </div>
-            <div class="sobre-info">
-                <p>SOBRE NÓS</p>
-                <h2>Paixão por café e boas experiências</h2>
-                <p>A Cafeteria Aroma nasceu do amor pelo café e da vontade de oferecer momentos únicos para nossos clientes. Selecionamos os melhores grãos e preparamos cada bebida com carinho e dedicação.</p>
-                <a href="#galeria"><button>SAIBA MAIS</button></a>
-            </div>
+            
         </section>
         <!----------------------------->
         <section id="cardapio">
-            <div class="cardapio-up">
-                <p>CARDÁPIO</p>
-                <h2>Nossas Delícias</h2>
+            <div class="cardapio-up sec-head">
+                <p class="section-name">CARDÁPIO</p>
+                <h2 class="section-head">Nossas Delícias</h2>
                 <span></span>
             </div>
-            <div class="cardapio-grid">
+            <div class="cardapio-grid grid-row">
                 <div class="cardapio-cat">
-                    <img src="" alt="">
+                    <img src="https://www.svgrepo.com/show/380616/hot-coffee-hot-drink.svg" alt="café">
                     <h3>Cafés</h3>
                     <p>Grãos especiais e bebidas quentes</p>
                 </div>
                 <!----------------------------->
                 <div class="cardapio-cat">
-                    <img src="" alt="">
+                    <img src="https://www.svgrepo.com/show/380617/ice-coffee-drink-soft-drink.svg" alt="">
                     <h3>Bebidas Geladas</h3>
                     <p>Refrescantes e saborosas</p>
                 </div>
                 <!----------------------------->
                 <div class="cardapio-cat">
-                    <img src="" alt="">
+                    <img src="https://www.svgrepo.com/show/380615/cookies-food-cake.svg" alt="">
                     <h3>Doces e Sobremesas</h3>
                     <p>Para adoçar seu dia</p>
                 </div>
                 <!----------------------------->
                 <div class="cardapio-cat">
-                    <img src="" alt="">
+                    <img src="https://www.svgrepo.com/show/50386/sandwich.svg" alt="">
                     <h3>Salgados</h3>
                     <p>Opções deliciosas</p>
                 </div>
                 <!----------------------------->
                 <div class="cardapio-cat">
-                    <img src="" alt="">
+                    <img src="https://www.svgrepo.com/show/458215/gift.svg" alt="">
                     <h3>Combos</h3>
                     <p>Promoções especiais</p>
                 </div>
             </div>
-            <button>VER CARDÁPIO COMPLETO</button>
+            <div class="button"><button>VER CARDÁPIO COMPLETO</button></div>
         </section>
         <!----------------------------->
-        <section id="produtos"></section>
+        <section id="produtos">
+            <div class="prods-up sec-head">
+                <p class="section-name">DESTAQUES</p>
+                <h2 class="section-head">Mais Pedidos</h2>
+            </div>
+            <!----------------------------->
+            <div class="prods-grid grid-row">
+                <div class="produtos">
+                    <div class="prod-img">
+                        <img src="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia29542/cafe-cpt.jpg" alt="">
+                    </div>
+                    <div class="prod-info">
+                        <p>Cappuccino Tradicional</p>
+                        <span>R$ 12,90</span>
+                        <button class="secondary">ADICIONAR</button>
+                    </div>
+                </div>
+                <!----------------------------->
+                <div class="produtos">
+                    <div class="prod-img">
+                        <img src="https://www.specialita.com/wp-content/uploads/2022/07/brownie-de-chocoavela-com-sorvete.jpg" alt="">
+                    </div>
+                    <div class="prod-info">
+                        <p>Brownie com Sorvete</p>
+                        <span>R$ 16,90</span>
+                        <button class="secondary">ADICIONAR</button>
+                    </div>
+                </div>
+                <!----------------------------->
+                <div class="produtos">
+                    <div class="prod-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNn91xnKenzCTeXG5DNSJk7-gMWLIEfv918w1LDZN5mYlKh6mQl5qhBMc&s=10" alt="">
+                    </div>
+                    <div class="prod-info">
+                        <p>Iced Coffee</p>
+                        <span>R$ 14,90</span>
+                        <button class="secondary">ADICIONAR</button>
+                    </div>
+                </div>
+                <!----------------------------->
+                <div class="produtos">
+                    <div class="prod-img">
+                        <img src="https://www.guacira.com.br/images/receitas/0427564001706795636.webp" alt="">
+                    </div>
+                    <div class="prod-info">
+                        <p>Pão de Queijo</p>
+                        <span>R$ 8,90</span>
+                        <button class="secondary">ADICIONAR</button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!----------------------------->
-        <section id="galeria"></section>
+        <section id="galeria">
+            <div class="galeria-grid">
+                <div class="galeria grid-row">
+                    <div class="galeria-img">
+                        <img src="https://perfectdailygrind.com/pt/wp-content/uploads/sites/5/2021/07/Unsplash-1-2.jpeg" alt="">
+                    </div>
+                    <div class="galeria-img">
+                        <img src="https://irp.cdn-website.com/33406c6e/dms3rep/multi/cafeteria.jpg" alt="">
+                    </div>
+                    <div class="galeria-img">
+                        <img src="https://rodrigomacedo.com.br/wp-content/uploads/2025/02/36643.jpg" alt="">
+                    </div>
+                </div>
+                <div class="depoimentos">
+                    <p class="section-name">DEPOIMENTOS</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p class="quotation">Ambiente aconchegante, atendimento excelente e um café incrível!</p>
+                    <span>— Juliana S.</span>
+                </div>
+            </div>
+        </section>
         <!----------------------------->
-        <section id="contato"></section>
+        <section id="contato">
+            <div class="contato-grid">
+                <form class="contato-forms">
+                    <h2 class="section-head">Entre em contato</h2>
+                    <div class="nome-email">
+                        <input type="text" placeholder="Nome">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <input type="text" placeholder="Assunto">
+                    <textarea placeholder="Mensagem"></textarea>
+                </form>
+                <div class="contato-infos">
+                    <div class="infos">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Rua do Café, 123<br>Centro - São Paulo/SP</p>
+                    </div>
+                    <div class="infos">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(11) 99999-9999</p>
+                    </div>
+                    <div class="infos">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>contato@cafearoma.com.br</p>
+                    </div>
+                    <div class="infos">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>Segunda a Sábado: 8h às 20h<br>Domingos e Feriados: 9h às 18h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
