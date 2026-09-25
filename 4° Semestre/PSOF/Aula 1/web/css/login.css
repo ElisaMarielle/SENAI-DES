@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: dm sans;
+}
+
+body{
+    background: #fffde2;
+    height: 100vh;
+}
+main{
+    height: 100%;
+}
+
+header{
+    background: #fffab0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+h1, h2{
+    font-weight: 700;
+    color: #4f4032;
+    text-decoration: 3px solid underline #897d737e;
+}
+nav a, nav button{
+    color: #4f4032;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 6px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 500ms;
+}
+nav a:hover, nav button:hover{
+    background-color: #897d73;
+    color: #fff;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;
+}
+form input, form select{
+    border: none; border-radius: 5px;
+    outline: 2px solid #897d73;
+    padding: 6px;
+}
+.btn{
+    margin-top: 10px;
+}
+.btn button, form button{
+    background-color: #897d73;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 30px;
+}
+.btn button:hover, form button:hover{
+    background-color: #72675e;
+}

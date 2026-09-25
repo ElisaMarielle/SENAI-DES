@@ -199,5 +199,135 @@ button:hover{
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    padding: 40px;
+    padding: 40px 40px 40px 60px;
+}
+.fa-quote-left{
+    position: relative;
+    font-size: 28px;
+    left: -40px;
+}
+
+
+.contato-grid{
+    align-items: center;
+    justify-items: stretch;
+}
+.contato-forms{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    padding: 0 20px 0 60px;
+}
+.contato-forms input, .contato-forms textarea{
+    padding: 6px 12px;
+    border: none;
+    outline: 2px solid #acabab;
+    font-family: dm sans;
+    color: var(--text);
+    resize: none;
+}
+.contato-forms input::placeholder{
+    color: var(--text);
+}
+.nome-email{
+    display: flex;
+    gap: 20px;
+}
+.nome-email input{
+    width: 100%;
+}
+.form-button{
+    margin-top: 10px;
+}
+.contato-infos{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-left: 2px solid var(--muted);
+    padding-left: 100px;
+}
+.contato-infos .infos{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.infos i{
+    font-size: 20px;
+}
+
+.footer-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    background: var(--section);
+    align-items: center;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    border-right: 2px solid var(--muted);
+}
+.footer-logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.footer-logo img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.footer-logo h4{
+    font-size: 28px;
+}
+.footer-socials{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.footer-socials i{
+    font-size: 24px;
+    color: var(--primary-dark);
+}
+
+.nav-cat{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 40px;
+    border-right: 2px solid var(--muted);
+}
+.nav-cat a{
+    color: #4A2F21;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 40px;
+}
+.newslet-input{
+    display: flex;
+    gap: 20px;
+}
+.newslet-input input{
+    padding: 6px 12px;
+    border: none;
+    outline: 2px solid #acabab;
+    font-family: dm sans;
+    color: var(--text);
+    width: 50%;
+}
+.footer-rights{
+    background: var(--section);
+    text-align: center;
+    color: #6F625B;
+    padding: 6px;
+    font-size: 13px;
 }

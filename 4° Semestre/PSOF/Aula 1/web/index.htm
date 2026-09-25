@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDF — Cortes a lazer</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MDF — Cortes a Lazer</h1>
+        <nav>
+            <a href="login.htm">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="center">
+            <h2>Cadastro</h2>
+            <form action="" id="formCadastro">
+                <input type="text" id="nome" placeholder="Nome completo" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="senha" placeholder="Crie uma senha" required>
+                <select id="tipo">
+                    <option value="">Selecione o tipo de conta</option>
+                    <option value="CLIENTE">Cliente</option>
+                    <option value="COMERCIANTE">Comerciante</option>
+                </select>
+                <button id="bt-cadastrar">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="./javascript/login.js"></script>
+</html>

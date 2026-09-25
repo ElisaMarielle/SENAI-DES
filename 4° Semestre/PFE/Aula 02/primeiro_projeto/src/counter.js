@@ -1,9 +1,26 @@
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `Count is ${counter}`
+export function criarContador(){
+  const valorElemento = document.querySelector('#valor')
+  const botaoAumentar = document.querySelector('#aumentar')
+  const botaoDiminuir = document.querySelector('#diminuir')
+  const botaoZerar = document.querySelector('#zerar')
+
+  if(!valorElemento || !botaoAumentar || !botaoDiminuir || !botaoZerar){
+    console.error('Não foi possível contar')
   }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
+let contador = 0;
+  function atualizarContador(){
+    valorElemento.textContent = contador;
+  }
+  botaoAumentar.addEventListener('click', ()=>{
+    contador += 1
+    atualizarContador()
+  })
+  botaoDiminuir.addEventListener('click', () =>{
+    contador -= 1
+    atualizarContador()
+  })
+  botaoZerar.addEventListener('click', () => {
+    contador = 0
+    atualizarContador()
+  })
 }

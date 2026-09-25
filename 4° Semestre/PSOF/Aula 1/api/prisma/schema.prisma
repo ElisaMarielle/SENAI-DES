@@ -1,0 +1,81 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Usuario {
+  id    Int    @id @default(autoincrement())
+  nome  String
+  email String @unique
+  senha String
+  tipo  Tipo   @default(CLIENTE)
+
+  pedidos   Pedido[]
+  producoes Producao[]
+}
+
+model Produto {
+  id            Int     @id @default(autoincrement())
+  nome          String
+  descricao     String?
+  custo         Decimal @db.Decimal(10, 2)
+  quant_estoque Int
+
+  itensPedido PedidoItens[]
+  producoes   Producao[]
+}
+
+model Pedido {
+  id          Int      @id @default(autoincrement())
+  usuario_id  Int
+  data_pedido DateTime @default(now())
+  status      Status   @default(PENDENTE)
+
+  itens PedidoItens[]
+
+  usuario Usuario @relation(fields: [usuario_id], references: [id])
+}
+
+model PedidoItens {
+  id         Int @id @default(autoincrement())
+  quantidade Int
+  pedido_id  Int
+  produto_id Int
+
+  pedido  Pedido  @relation(fields: [pedido_id], references: [id])
+  produto Produto @relation(fields: [produto_id], references: [id])
+}
+
+model Producao {
+  id          Int       @id @default(autoincrement())
+  produto_id  Int
+  usuario_id Int
+  quantidade  Int
+  data_inicio DateTime  @default(now())
+  data_fim    DateTime?
+  status      Status    @default(PENDENTE)
+
+  produto   Produto  @relation(fields: [produto_id], references: [id])
+  usuario   Usuario @relation(fields: [usuario_id], references: [id])
+
+}
+
+enum Tipo {
+  CLIENTE
+  COMERCIANTE
+}
+
+enum Status {
+  PENDENTE
+  EM_PRODUCAO
+  CONCLUIDO
+}
