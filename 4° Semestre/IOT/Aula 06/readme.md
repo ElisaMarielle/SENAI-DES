@@ -2,8 +2,8 @@
 
 ## Desafio do semáforo no arduíno
 1. **FOTO:**
-<br>
+
 ![foto](imagem.jpeg)
 2. **VÍDEO:**
-<br>
+
 [![Assistir ao vídeo](imagem.jpeg)](semaforo.mp4)
