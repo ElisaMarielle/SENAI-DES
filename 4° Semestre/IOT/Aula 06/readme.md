@@ -6,4 +6,4 @@
 ![foto](imagem.jpeg)
 2. **VÍDEO:**
 
-[![Assistir ao vídeo](imagem.jpeg)](semaforo.mp4)
+[Vídeo](semaforo.mp4)
